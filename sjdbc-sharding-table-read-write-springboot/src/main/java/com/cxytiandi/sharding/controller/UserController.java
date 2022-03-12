@@ -23,9 +23,8 @@ public class UserController {
 	public Object add() {
 		for (long i = 0; i < 100; i++) {
 			User user = new User();
-			user.setId(i);
 			user.setCity("深圳");
-			user.setName("李四");
+			user.setName("李四"+i);
 			userService.add(user);
 		}
 		return "success";
